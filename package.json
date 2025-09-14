@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "@tailwindplus/elements": "^1.0.12",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "tailwindcss": "^4.1.12"
+  }
+}
