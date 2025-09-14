@@ -101,3 +101,22 @@
 .inputs.filled::before {
     padding: 0 0.8rem;
 }
+
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.container>div {
+    display: none;
+    /* hide all children by default */
+}
+
+.container> div.show {
+    display: block;
+    /* only the one with .show is visible */
+}
