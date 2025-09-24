@@ -1,7 +1,7 @@
  :root {
      --background: #000;
      --foreground: #fff;
-     --muted: #111;
+     --muted: #222;
      --black-onyx: #353839;
      /* Onyx */
      --black-charcoal: #36454f;
@@ -48,4 +48,8 @@
     --warning: oklch(0.7 0.19 100);
     --success: oklch(0.7 0.19 160);
     --info: oklch(0.7 0.19 260);
+
+    --spacing: 4px;
+    --logo-size: 1.8rem;
+    --rounded: 4px;
  }

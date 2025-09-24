@@ -1,0 +1,12 @@
+Features
+
+1. Admin can search individual user
+2. Admin can serach all users
+3. Basic role cannot search user
+4. Log in admin before can search modify
+5. Have authentication for roles
+6. Admin panel, search bar automatic find the specifc user (modify)
+7. Load Purchase
+8. Before you can read transaction history, make sure that 
+the user is validated, and the account is his.
+9. All transaction can read, filter like speciifc type
