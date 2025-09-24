@@ -1,0 +1,24 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "3d3c2308-cffd-45b7-95c5-be4675484628",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1758511842238"
+        }
+      },
+      "favorite": {
+        "name": "EzPay"
+      },
+      "savedConnectionType": "favorite",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {}
+      }
+    }
+  ]
+}
