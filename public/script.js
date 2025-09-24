@@ -26,7 +26,6 @@ registerBtns.forEach(btn => {
     loginForm.classList.remove('show');
     registerForm.classList.add('show');
     landPage.classList.remove('show');
-    
     // Optional: Add classes for different container sizing
     // container.classList.add('max-w-2xl');
     // main.classList.add('justify-center');

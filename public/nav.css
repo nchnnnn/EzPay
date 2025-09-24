@@ -1,0 +1,44 @@
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--spacing) * 2);
+    background-color: var(--background);
+}
+
+nav>a {
+    font-weight: bold;
+    margin-left: calc(var(--spacing) * 5);
+    font-size: var(--logo-size);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2%;
+    gap: 1rem;
+}
+
+.nav-link {
+    font-weight: bold;
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+    border-radius: calc(var(--spacing) * 2);
+}
+
+nav a[href="/contact"]:hover {
+    background-color: var(--muted);
+    color: var(--accent);
+}
+
+nav a[href="/about"] {
+    background-color: var(--accent);
+    color: var(--black-pitch);
+    border-radius: calc(infinity * 1px);
+}
+
+nav a[href="/about"]:hover {
+    background-color: var(--muted);
+    color: var(--accent);
+}
