@@ -1,0 +1,125 @@
+.register-form-container {
+    position: relative;
+    opacity: 1;
+    transform: none;
+}
+
+.register-form-inner {
+    padding: 1.5rem;
+    background-color: var(--card, var(--background));
+    border-radius: 0.5rem;
+    border: 1px solid var(--border, #374151);
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    position: absolute;
+    top: -5%;
+    background-color: var(--background);
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.name-flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.name-flex div {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .name-flex {
+        flex-direction: column;
+    }
+}
+
+.input-wrapper {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    position: absolute;
+    background-color: var(--background);
+    outline: 1px solid red;
+}
+
+.input-label:hover {
+    top: -28%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border, #374151);
+    background-color: var(--background);
+    border-radius: 0.375rem;
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.form-actions {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border, #374151);
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary, #6b7280);
+    color: var(--secondary-foreground, #ffffff);
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.cancel-btn:hover {
+    background-color: rgba(107, 114, 128, 0.8);
+}
+
+.next-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary, #3b82f6);
+    color: white;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.next-btn:hover {
+    background-color: rgba(59, 130, 246, 0.9);
+}
+
+.chevron-left {
+    margin-right: 0.25rem;
+}
+
+.chevron-right {
+    margin-left: 0.25rem;
+}

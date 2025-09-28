@@ -1,15 +1,51 @@
 // Get DOM elements with updated selectors
-const loginInputs = document.querySelectorAll('.login-form input'); // Updated selector
-const registerInputs = document.querySelectorAll('.register-form input'); // Added for register form inputs
+const loginInputs = document.querySelectorAll('.login-form input');
 const logo = document.getElementById('logo');
 const container = document.querySelector('main .container-styles');
 const main = document.querySelector('main');
 
-// Get navigation elements
+
 const loginBtn = document.querySelector('.container-styles .land-page .login-btn');
 const landPage = document.querySelector('.container-styles .land-page');
 const loginForm = document.querySelector('.container-styles .login-form');
 const registerForm = document.querySelector('.container-styles .register-form');
+
+// Input field functionality for floating labels 
+const labelTrigger = document.querySelectorAll('.form .input-field');
+labelTrigger.forEach(input => {
+  function checkValue() {
+    if (input.value.trim() !== "") {
+      input.parentElement.classList.add('filled');
+    } else {
+      input.parentElement.classList.remove('filled');
+    }
+  }
+  input.addEventListener('input', checkValue);
+  input.addEventListener('blur', checkValue); // Also check on blur
+  checkValue(); // Initial check
+});
+
+// Trigger date picker on click and input field 
+const datePicker = document.querySelector('.input-field[type="date"]');
+  datePicker.addEventListener("click", () => {
+    datePicker.showPicker();
+    datePicker.click();
+    datePicker.focus();
+  });
+
+function checkValue() {
+    if (datePicker.value === "") {
+      datePicker.parentElement.removeAttribute("data-label");
+    } else {
+      datePicker.parentElement.setAttribute("data-label", "Birth Date");
+    }
+  }
+
+  checkValue();
+
+  // Check whenever user changes date
+  datePicker.addEventListener("change", checkValue);
+  datePicker.addEventListener("input", checkValue); 
 
 // Login button functionality
 loginBtn.addEventListener('click', (e) => {
@@ -21,6 +57,7 @@ loginBtn.addEventListener('click', (e) => {
 // Register buttons functionality (multiple register buttons)
 const registerBtns = document.querySelectorAll('.register-btn');
 registerBtns.forEach(btn => {
+
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     loginForm.classList.remove('show');
@@ -33,34 +70,22 @@ registerBtns.forEach(btn => {
 });
 
 // Input field functionality for floating labels - Login form
-loginInputs.forEach(input => {
-  function checkValue() {
-    if (input.value.trim() !== "") {
-      input.parentElement.classList.add('filled');
-    } else {
-      input.parentElement.classList.remove('filled');
-    }
-  }
+// loginInputs.forEach(input => {
+//   function checkValue() {
+//     if (input.value.trim() !== "") {
+//       input.parentElement.classList.add('filled');
+//     } else {
+//       input.parentElement.classList.remove('filled');
+//     }
+//   }
   
-  input.addEventListener('input', checkValue);
-  input.addEventListener('blur', checkValue); // Also check on blur
-  checkValue(); // Initial check
-});
+//   input.addEventListener('input', checkValue);
+//   input.addEventListener('blur', checkValue); // Also check on blur
+//   checkValue(); // Initial check
+// });
 
 // Input field functionality for floating labels - Register form
-registerInputs.forEach(input => {
-  function checkValue() {
-    if (input.value.trim() !== "") {
-      input.parentElement.classList.add('filled');
-    } else {
-      input.parentElement.classList.remove('filled');
-    }
-  }
-  
-  input.addEventListener('input', checkValue);
-  input.addEventListener('blur', checkValue); // Also check on blur
-  checkValue(); // Initial check
-});
+
 
 // Back to landing page functionality (optional)
 const backToLandingButtons = document.querySelectorAll('.cancel-btn');

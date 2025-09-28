@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     firstName: { type: String, required: true},
     lastName:  { type: String, required: true},
     middleName:{ type: String },
-    birthDate: { type: String, required: true },
+    birthDate: { type: Date, required: true },
     gender:    { type: String, enum: ["Male", "Female"], required: true },
     nationality: { type: String, required: true },
 
@@ -50,6 +50,10 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         default: "basic"
+    },
+    lastLogin: { 
+        type: Date
+
     }
 }, { timestamps: true });
 

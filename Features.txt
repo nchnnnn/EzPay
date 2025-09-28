@@ -10,3 +10,4 @@ Features
 8. Before you can read transaction history, make sure that 
 the user is validated, and the account is his.
 9. All transaction can read, filter like speciifc type
+10. Confirmation email for registration and updating, sent by email.

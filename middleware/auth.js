@@ -1,13 +1,15 @@
 const jwt = require('jsonwebtoken');
 const User = require("../model/userModel");
 require("dotenv").config();
+
 const JWT_SECRET = process.env.JWT_SECRET;
 
 exports.authenticateToken = async (req, res, next) =>{
     try {
         const authHeader = req.headers['authorization'];
-        const token = authHeader && authHeader.split(' ')
+        const token = authHeader && authHeader.split(' ')[1];
 
+        console.log("Token:", token);   
         if(!token){
             return res.status(401).json({
                 error: 'Access denied. No token provided.'
@@ -15,7 +17,9 @@ exports.authenticateToken = async (req, res, next) =>{
         }
 
         const decode = jwt.verify(token, JWT_SECRET)
-        const user = await User.findById(decode.id).select('-password');
+       
+        const user = await User.findById(decode.userId).select('-password');
+
 
         if(!user || !user.isActive){
             return res.status(401).json({
@@ -47,5 +51,6 @@ exports.authorizeUser = (req, res, next) =>{
 exports.generateToken = (userId) =>{
     return jwt.sign({ userId }, JWT_SECRET, { expiresIn: '1hr'})
 }
+
 
 

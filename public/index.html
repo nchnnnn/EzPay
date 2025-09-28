@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="root.css">
     <link rel="stylesheet" href="tailwind.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="register.css">
     <script src="script.js" defer></script>
 </head>
 
@@ -22,26 +23,28 @@
 
     <main class="main-styles">
         <div class="container-styles">
-            <div class="land-page show landing-page-styles">
+             <div class="land-page show landing-page-styles">
                 <h2 class="landing-title"><q>Your Money, Your Control.</q></h2>
                 <p class="landing-description">All-in-one E-wallet and Banking for secure payments anytime, anywhere.
                 </p>
 
                 <h2 class="landing-text"><q>Start Your Digital Journey</q></h2>
-                <a class="register-btn landing-register-btn">Get Started</a>
-                <a class="login-btn landing-login-btn">Login</a>
+                <a href="register" class="register-btn landing-register-btn">Get Started</a>
+                <a href="login" class="login-btn landing-login-btn">Login</a>
        
-            </div>
+            </div> 
 
-            <div class="login-form login-form-styles">
-                <form action="#" class="login-form-inner">
+             <div class="login-form show login-form-styles">
+                <form action="#" class="login-form-inner form">
                     <h2 class="login-title">Login</h2>
                     <div class="inputs input-group" data-label="Username or User ID">
                         <input type="text" class="input-field">
                     </div>
                     <div class="inputs input-group" data-label="Password">
-                        <input type="text" class="input-field">
+                        <input type="password" class="input-field">
                     </div>
+
+                    
                     <div class="login-options">
                         <div class="remember-section">
                             <input type="checkbox" id="remember" class="checkbox-input">
@@ -59,11 +62,11 @@
                             <a href="/register" class="register-btn register-link-btn">Register</a>
                         </p>
                     </div>
-                </form>
-            </div>
-            
-            <!-- register Form -->
-            <div class="register-form register-form-styles">
+                </form> 
+            </div> 
+             
+
+             <div class="register-form register-form-styles">
                 <div class="progress-indicator">
                     <div class="step-container">
                         <div class="step-item">
@@ -73,47 +76,45 @@
                         </div>
                         <div class="step-item">
                             <div class="step-circle inactive-step">2</div>
-                            <span class="step-label inactive-label">Create Account</span>
-                            <div class="step-line hidden-mobile"></div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-circle inactive-step">3</div>
                             <span class="step-label inactive-label">Background</span>
                             <div class="step-line hidden-mobile"></div>
                         </div>
+
                         <div class="step-item">
-                            <div class="step-circle inactive-step">4</div>
+                            <div class="step-circle inactive-step">3</div>
                             <span class="step-label inactive-label">Review</span>
                             <div class="step-line hidden-mobile"></div>
                         </div>
                     </div>
                 </div>
+
                 <div class="register-form-container">
-                    <form class="register-form-inner">
+                    <form class="register-form-inner form">
                         <div class="form-section">
                             <h2 class="section-title">Personal Information</h2>
-                            <div class="name-grid">
-                                <div class="input-wrapper">
-                                    <label for="firstName" class="input-label">First Name</label>
-                                    <input id="firstName" required class="form-input" placeholder="Enter your first name"
-                                        type="text" value="" name="firstName">
+                            <div class="name-flex">
+                                <div class="inputs filled input-group" data-label="First Name">
+                                    <input type="text" value="" class="input-field">
                                 </div>
-                                <div class="input-wrapper">
-                                    <label for="lastName" class="input-label">Last Name</label>
-                                    <input id="lastName" required class="form-input" placeholder="Enter your last name" type="text"
-                                        value="" name="lastName">
+
+                                <div class="inputs input-group" data-label="Last Name">
+                                    <input type="text" class="input-field">
                                 </div>
                             </div>
-                            <div class="input-wrapper">
-                                <label for="email" class="input-label">Email Address</label>
-                                <input id="email" required class="form-input" placeholder="you@example.com" type="email" value=""
-                                    name="email">
+                            <div class="name-flex">
+                                <div class="inputs input-group" data-label="Phone Number">
+                                    <input type="tel" class="input-field">
+                                </div>
+                                
+                                <div class="inputs input-group " >
+                                    <input type="date" class=" input-field">
+                                </div>
+                      
                             </div>
-                            <div class="input-wrapper">
-                                <label for="phone" class="input-label">Phone Number</label>
-                                <input id="phone" required class="form-input" placeholder="+63 XXX XXX XXXX" type="tel" value=""
-                                    name="phone">
+                            <div class="inputs input-group" data-label="Email Address">
+                                <input type="email" class="input-field">
                             </div>
+                            
                         </div>
                         <div class="form-actions">
                             <a class="cancel-btn" href="/">
@@ -135,7 +136,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> 
         </div>
 
         <div class="registration-info bg-image">
