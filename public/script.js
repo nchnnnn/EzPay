@@ -5,7 +5,6 @@ const container = document.querySelector('main .container-styles');
 const main = document.querySelector('main');
 
 
-const loginBtn = document.querySelector('.container-styles .land-page .login-btn');
 const landPage = document.querySelector('.container-styles .land-page');
 const loginForm = document.querySelector('.container-styles .login-form');
 const registerForm = document.querySelector('.container-styles .register-form');
@@ -25,34 +24,7 @@ labelTrigger.forEach(input => {
   checkValue(); // Initial check
 });
 
-// Trigger date picker on click and input field 
-const datePicker = document.querySelector('.input-field[type="date"]');
-  datePicker.addEventListener("click", () => {
-    datePicker.showPicker();
-    datePicker.click();
-    datePicker.focus();
-  });
 
-function checkValue() {
-    if (datePicker.value === "") {
-      datePicker.parentElement.removeAttribute("data-label");
-    } else {
-      datePicker.parentElement.setAttribute("data-label", "Birth Date");
-    }
-  }
-
-  checkValue();
-
-  // Check whenever user changes date
-  datePicker.addEventListener("change", checkValue);
-  datePicker.addEventListener("input", checkValue); 
-
-// Login button functionality
-loginBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  landPage.classList.remove('show');
-  loginForm.classList.add('show');
-});
 
 // Register buttons functionality (multiple register buttons)
 const registerBtns = document.querySelectorAll('.register-btn');
@@ -63,9 +35,19 @@ registerBtns.forEach(btn => {
     loginForm.classList.remove('show');
     registerForm.classList.add('show');
     landPage.classList.remove('show');
-    // Optional: Add classes for different container sizing
-    // container.classList.add('max-w-2xl');
-    // main.classList.add('justify-center');
+
+  });
+});
+
+// Login button functionality
+const loginBtns = document.querySelectorAll('.landing-login-btn');
+loginBtns.forEach(btn => {
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    loginForm.classList.add('show');
+    registerForm.classList.remove('show');
+    landPage.classList.remove('show');
   });
 });
 
@@ -100,6 +82,7 @@ backToLandingButtons.forEach(btn => {
 
 // Form submission handlers (optional - for future use)
 const loginFormElement = document.querySelector('.login-form form');
+
 const registerFormElement = document.querySelector('.register-form form');
 
 // Login form submission
@@ -111,18 +94,14 @@ if (loginFormElement) {
   });
 }
 
-// Register form submission
 if (registerFormElement) {
   registerFormElement.addEventListener('submit', (e) => {
     e.preventDefault();
-    // Add your register logic here
     console.log('Register form submitted');
   });
 }
 
-// Initialize the page (show landing page by default)
 document.addEventListener('DOMContentLoaded', () => {
-  // Ensure only landing page is visible on load
   landPage.classList.add('show');
   loginForm.classList.remove('show');
   registerForm.classList.remove('show');

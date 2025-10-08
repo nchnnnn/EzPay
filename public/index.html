@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="tailwind.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="register.css">
+
     <script src="script.js" defer></script>
 </head>
 
@@ -16,8 +17,8 @@
     <nav class="nav-styles">
         <a href="#" id="logo" class="logo-styles">EzPay</a>
         <div class="nav-links">
-            <a href="/contact" class="nav-link">Contact</a>
-            <a href="/about" class="nav-link">About</a>
+            <a href="/contact" class="nav-link shadow-s">Contact</a>
+            <a href="/about" class="nav-link shadow-l">About</a>
         </div>
     </nav>
 
@@ -29,12 +30,12 @@
                 </p>
 
                 <h2 class="landing-text"><q>Start Your Digital Journey</q></h2>
-                <a href="register" class="register-btn landing-register-btn">Get Started</a>
-                <a href="login" class="login-btn landing-login-btn">Login</a>
+                <a href="register" class="landing-register-btn register-btn shadow-s">Get Started</a>
+                <a href="login" class="landing-login-btn shadow-s">Login</a>
        
             </div> 
 
-             <div class="login-form show login-form-styles">
+             <div class="login-form login-form-styles">
                 <form action="#" class="login-form-inner form">
                     <h2 class="login-title">Login</h2>
                     <div class="inputs input-group" data-label="Username or User ID">
@@ -67,24 +68,20 @@
              
 
              <div class="register-form register-form-styles">
-                <div class="progress-indicator">
-                    <div class="step-container">
-                        <div class="step-item">
-                            <div class="step-circle active-step">1</div>
-                            <span class="step-label active-label">Profile Information</span>
-                            <div class="step-line hidden-mobile"></div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-circle inactive-step">2</div>
-                            <span class="step-label inactive-label">Background</span>
-                            <div class="step-line hidden-mobile"></div>
-                        </div>
+      
+                <div class="step-container">
+                    <div class="step-item">
+                        <div class="step-circle active-step" progress-label="Profile Information">1</div>
+                        <span class="step-label active-label">Profile Information</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle inactive-step" progress-label="Background">2</div>
+                        <span class="step-label inactive-label">Background</span>
+                    </div>
 
-                        <div class="step-item">
-                            <div class="step-circle inactive-step">3</div>
-                            <span class="step-label inactive-label">Review</span>
-                            <div class="step-line hidden-mobile"></div>
-                        </div>
+                    <div class="step-item">
+                        <div class="step-circle inactive-step" progress-label="Review">3</div>
+                        <span class="step-label inactive-label">Review</span>
                     </div>
                 </div>
 
@@ -106,7 +103,7 @@
                                     <input type="tel" class="input-field">
                                 </div>
                                 
-                                <div class="inputs input-group " >
+                                <div class="inputs input-group " data-label="Birth Date" >
                                     <input type="date" class=" input-field">
                                 </div>
                       

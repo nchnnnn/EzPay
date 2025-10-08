@@ -19,17 +19,19 @@ nav>a {
     justify-content: center;
     margin-right: 2%;
     gap: 1rem;
+    
 }
 
 .nav-link {
     font-weight: bold;
     padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
     border-radius: calc(var(--spacing) * 2);
+    color: var(--text-primary);
 }
 
 nav a[href="/contact"]:hover {
     background-color: var(--muted);
-    color: var(--accent);
+
 }
 
 nav a[href="/about"] {
@@ -40,5 +42,5 @@ nav a[href="/about"] {
 
 nav a[href="/about"]:hover {
     background-color: var(--muted);
-    color: var(--accent);
+    color: var(--text-primary);
 }

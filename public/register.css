@@ -123,3 +123,58 @@
 .chevron-right {
     margin-left: 0.25rem;
 }
+
+
+/* progress indicator styles */
+
+
+.step-container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.step-circle {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.active-step {
+    background-color: var(--primary, #3b82f6);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.inactive-step {
+    background-color: var(--secondary, #6b7280);
+    color: var(--secondary-foreground, #ffffff);
+}
+
+.step-label {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+}
+
+.active-label {
+    color: var(--foreground, #ffffff);
+}
+
+.inactive-label {
+    color: var(--muted-foreground, #9ca3af);
+}
